@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    let astronauts = Bundle.main.decode("astronauts.json")
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack {
+                Text("\(astronauts.count)")
+            }
+            .navigationTitle("MoonShot")
+            .navigationBarTitleDisplayMode(.inline)
+            .preferredColorScheme(.dark)
+        }
     }
 }
 
